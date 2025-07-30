@@ -1,40 +1,65 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Poppins:wght@300;400;500;600;700&display=swap');
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
-/* Definition of the design system. All colors, gradients, fonts, etc should be defined here. 
-All colors MUST be HSL.
-*/
+/* Vedic E-commerce Design System - Earth tones and sacred aesthetics */
 
 @layer base {
   :root {
-    --background: 0 0% 100%;
-    --foreground: 222.2 84% 4.9%;
+    /* Core Vedic color palette */
+    --background: 39 30% 98%;
+    --foreground: 24 45% 12%;
 
-    --card: 0 0% 100%;
-    --card-foreground: 222.2 84% 4.9%;
+    --card: 39 20% 96%;
+    --card-foreground: 24 45% 12%;
 
-    --popover: 0 0% 100%;
-    --popover-foreground: 222.2 84% 4.9%;
+    --popover: 39 30% 98%;
+    --popover-foreground: 24 45% 12%;
 
-    --primary: 222.2 47.4% 11.2%;
-    --primary-foreground: 210 40% 98%;
+    /* Sacred saffron and earth tones */
+    --primary: 32 68% 48%; /* Sacred saffron/turmeric */
+    --primary-foreground: 39 30% 98%;
+    --primary-glow: 45 86% 65%; /* Golden glow */
 
-    --secondary: 210 40% 96.1%;
-    --secondary-foreground: 222.2 47.4% 11.2%;
+    --secondary: 35 25% 88%; /* Warm cream */
+    --secondary-foreground: 24 45% 12%;
 
-    --muted: 210 40% 96.1%;
-    --muted-foreground: 215.4 16.3% 46.9%;
+    --muted: 35 15% 92%;
+    --muted-foreground: 24 20% 45%;
 
-    --accent: 210 40% 96.1%;
-    --accent-foreground: 222.2 47.4% 11.2%;
+    --accent: 26 75% 55%; /* Cow dung brown */
+    --accent-foreground: 39 30% 98%;
 
-    --destructive: 0 84.2% 60.2%;
-    --destructive-foreground: 210 40% 98%;
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 39 30% 98%;
 
-    --border: 214.3 31.8% 91.4%;
-    --input: 214.3 31.8% 91.4%;
-    --ring: 222.2 84% 4.9%;
+    --border: 35 12% 88%;
+    --input: 35 15% 95%;
+    --ring: 32 68% 48%;
+
+    /* Vedic-specific colors */
+    --vedic-earth: 26 45% 35%; /* Deep earth brown */
+    --vedic-cream: 42 45% 95%; /* Warm cream */
+    --vedic-gold: 45 86% 65%; /* Sacred gold */
+    --vedic-sage: 120 15% 75%; /* Sage green */
+
+    /* Gradients */
+    --gradient-sacred: linear-gradient(135deg, hsl(var(--primary)), hsl(var(--primary-glow)));
+    --gradient-earth: linear-gradient(180deg, hsl(var(--vedic-cream)), hsl(var(--background)));
+    --gradient-sunset: linear-gradient(135deg, hsl(var(--primary-glow)), hsl(var(--accent)));
+
+    /* Shadows */
+    --shadow-sacred: 0 10px 30px -10px hsl(var(--primary) / 0.3);
+    --shadow-warm: 0 4px 20px -4px hsl(var(--accent) / 0.2);
+    --shadow-glow: 0 0 40px hsl(var(--primary-glow) / 0.4);
+
+    /* Animations */
+    --transition-sacred: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+
+    --radius: 1rem;
 
     --radius: 0.5rem;
 
@@ -56,41 +81,39 @@ All colors MUST be HSL.
   }
 
   .dark {
-    --background: 222.2 84% 4.9%;
-    --foreground: 210 40% 98%;
-
-    --card: 222.2 84% 4.9%;
-    --card-foreground: 210 40% 98%;
-
-    --popover: 222.2 84% 4.9%;
-    --popover-foreground: 210 40% 98%;
-
-    --primary: 210 40% 98%;
-    --primary-foreground: 222.2 47.4% 11.2%;
-
-    --secondary: 217.2 32.6% 17.5%;
-    --secondary-foreground: 210 40% 98%;
-
-    --muted: 217.2 32.6% 17.5%;
-    --muted-foreground: 215 20.2% 65.1%;
-
-    --accent: 217.2 32.6% 17.5%;
-    --accent-foreground: 210 40% 98%;
-
-    --destructive: 0 62.8% 30.6%;
-    --destructive-foreground: 210 40% 98%;
-
-    --border: 217.2 32.6% 17.5%;
-    --input: 217.2 32.6% 17.5%;
-    --ring: 212.7 26.8% 83.9%;
-    --sidebar-background: 240 5.9% 10%;
-    --sidebar-foreground: 240 4.8% 95.9%;
-    --sidebar-primary: 224.3 76.3% 48%;
-    --sidebar-primary-foreground: 0 0% 100%;
-    --sidebar-accent: 240 3.7% 15.9%;
-    --sidebar-accent-foreground: 240 4.8% 95.9%;
-    --sidebar-border: 240 3.7% 15.9%;
-    --sidebar-ring: 217.2 91.2% 59.8%;
+    --background: 24 45% 8%;
+    --foreground: 39 30% 95%;
+    
+    --card: 24 35% 12%;
+    --card-foreground: 39 30% 95%;
+    
+    --popover: 24 45% 8%;
+    --popover-foreground: 39 30% 95%;
+    
+    --primary: 45 86% 65%;
+    --primary-foreground: 24 45% 8%;
+    --primary-glow: 32 68% 48%;
+    
+    --secondary: 24 25% 18%;
+    --secondary-foreground: 39 30% 95%;
+    
+    --muted: 24 20% 15%;
+    --muted-foreground: 35 15% 65%;
+    
+    --accent: 32 45% 45%;
+    --accent-foreground: 39 30% 95%;
+    
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 39 30% 95%;
+    
+    --border: 24 20% 20%;
+    --input: 24 20% 15%;
+    --ring: 45 86% 65%;
+    
+    --vedic-earth: 26 35% 25%;
+    --vedic-cream: 42 25% 85%;
+    --vedic-gold: 45 86% 65%;
+    --vedic-sage: 120 15% 65%;
   }
 }
 
@@ -100,6 +123,87 @@ All colors MUST be HSL.
   }
 
   body {
-    @apply bg-background text-foreground;
+    @apply bg-background text-foreground font-inter;
+  }
+  
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-poppins;
+  }
+}
+
+@layer components {
+  /* Sacred animations */
+  .animate-sacred-glow {
+    animation: sacred-glow 3s ease-in-out infinite;
+  }
+  
+  .animate-float {
+    animation: float 6s ease-in-out infinite;
+  }
+  
+  .hover-lift {
+    @apply transition-all duration-300 hover:scale-105 hover:shadow-xl;
+  }
+  
+  .sacred-gradient {
+    background: var(--gradient-sacred);
+  }
+  
+  .earth-gradient {
+    background: var(--gradient-earth);
+  }
+  
+  .sunset-gradient {
+    background: var(--gradient-sunset);
+  }
+  
+  .shadow-sacred {
+    box-shadow: var(--shadow-sacred);
+  }
+  
+  .shadow-warm {
+    box-shadow: var(--shadow-warm);
+  }
+  
+  .shadow-glow {
+    box-shadow: var(--shadow-glow);
+  }
+}
+
+@layer utilities {
+  .text-vedic-earth {
+    color: hsl(var(--vedic-earth));
+  }
+  
+  .text-vedic-gold {
+    color: hsl(var(--vedic-gold));
+  }
+  
+  .bg-vedic-cream {
+    background-color: hsl(var(--vedic-cream));
+  }
+  
+  .bg-vedic-sage {
+    background-color: hsl(var(--vedic-sage));
+  }
+}
+
+@keyframes sacred-glow {
+  0%, 100% {
+    opacity: 0.8;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 1;
+    transform: scale(1.02);
+  }
+}
+
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-10px);
   }
 }
