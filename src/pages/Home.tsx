@@ -30,7 +30,7 @@ const Home = () => {
   return (
     <>
       <Helmet>
-        <title>Vedic Hearth - Pure Cow Ghee & Natural Products | Buy Online</title>
+        <title>Pure Cow Ghee & Natural Products | Buy Online</title>
         <meta name="description" content="Buy pure A2 cow ghee, handmade cow dung products & organic Vedic lifestyle goods. Free international shipping. Trusted by 20+ countries." />
         <meta name="keywords" content="cow ghee, A2 ghee, cow dung products, organic, vedic, ayurvedic, natural products" />
       </Helmet>
@@ -79,7 +79,7 @@ const Home = () => {
               <Button 
                 variant="outline" 
                 size="lg" 
-                className="text-lg px-8 py-6 border-white/30 text-white hover:bg-white/10"
+                className="sacred-gradient text-lg px-8 py-6 hover-lift"
                 asChild
               >
                 <Link to="/about">

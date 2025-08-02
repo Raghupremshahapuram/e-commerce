@@ -60,7 +60,7 @@ const Navbar = () => {
               <span className="text-primary-foreground font-bold text-lg">🐄</span>
             </motion.div>
             <span className="font-poppins font-bold text-xl text-foreground">
-              Vedic Hearth
+              Cow products
             </span>
           </Link>
 

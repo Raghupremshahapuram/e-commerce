@@ -25,12 +25,12 @@ const Footer = () => {
                 <span className="text-primary-foreground font-bold">🐄</span>
               </div>
               <span className="font-poppins font-bold text-lg text-foreground">
-                Vedic Hearth
+              Cow products
               </span>
             </div>
             <p className="text-muted-foreground text-sm leading-relaxed">
               From the cow to your home – pure, sacred, natural. We bring you authentic 
-              Vedic products crafted with love and tradition, trusted by families in 20+ countries.
+             products crafted with love and tradition, trusted by families in 20+ countries.
             </p>
             <div className="flex space-x-3">
               <Button variant="ghost" size="icon" className="text-muted-foreground hover:text-primary">
@@ -101,15 +101,15 @@ const Footer = () => {
             <div className="space-y-2">
               <div className="flex items-center space-x-2 text-sm text-muted-foreground">
                 <Mail className="h-4 w-4" />
-                <span>hello@vedichearth.com</span>
+                <span>hello@gmail.com</span>
               </div>
               <div className="flex items-center space-x-2 text-sm text-muted-foreground">
                 <Phone className="h-4 w-4" />
-                <span>+91 98765 43210</span>
+                <span>+91 9999999999</span>
               </div>
               <div className="flex items-center space-x-2 text-sm text-muted-foreground">
                 <MapPin className="h-4 w-4" />
-                <span>Vrindavan, Uttar Pradesh, India</span>
+                <span>*****, India</span>
               </div>
             </div>
 
@@ -136,7 +136,7 @@ const Footer = () => {
         <div className="border-t border-border mt-8 pt-8">
           <div className="flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">
             <div className="text-sm text-muted-foreground text-center md:text-left">
-              © 2024 Vedic Hearth. Made with{' '}
+              © 2024 Cow products. Made with{' '}
               <Heart className="inline h-4 w-4 text-red-500 mx-1" />{' '}
               for a healthier world.
             </div>
