@@ -4,6 +4,8 @@ import path from "path";
 import { componentTagger } from "lovable-tagger";
 
 export default defineConfig(({ mode }) => ({
+  base: '/', // 👈 required for Netlify
+
   server: {
     host: "::",
     port: 8080,
@@ -18,11 +20,10 @@ export default defineConfig(({ mode }) => ({
     },
   },
   build: {
-    chunkSizeWarningLimit: 1000, // increase from 500 KB to 1000 KB
+    chunkSizeWarningLimit: 1000,
     rollupOptions: {
       output: {
         manualChunks(id) {
-          // Split big dependencies into separate chunks
           if (id.includes("node_modules")) {
             if (id.includes("react")) return "react-vendor";
             if (id.includes("bootstrap")) return "bootstrap-vendor";
